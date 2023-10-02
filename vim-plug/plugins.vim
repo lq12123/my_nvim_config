@@ -4,9 +4,10 @@ call plug#begin()
 " coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" vim-airline
-Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+" barbar.nvim
+Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
+Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
+Plug 'romgrk/barbar.nvim'
 
 " auto-pairs
 Plug 'jiangmiao/auto-pairs'

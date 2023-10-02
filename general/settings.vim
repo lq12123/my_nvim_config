@@ -10,7 +10,8 @@ set nolz
 set ttyfast
 set foldmethod=syntax
 set tags=./tags,tags;$HOME
-
+let mapleader=","
+set clipboard=unnamed
 
 " visual settings
 set termguicolors
@@ -18,34 +19,17 @@ colo gruvbox
 
 " font
 " set guifont=Fira\ Code:h12
-let g:airline_powerline_fonts=1
-
-" nerdtree-git-plugin settings
-" let g:NERDTreeGitStatusIndicatorMapCustom = {
-"                 \ 'Modified'  :'✹',
-"                 \ 'Staged'    :'✚',
-"                 \ 'Untracked' :'✭',
-"                 \ 'Renamed'   :'➜',
-"                 \ 'Unmerged'  :'═',
-"                 \ 'Deleted'   :'✖',
-"                 \ 'Dirty'     :'✗',
-"                 \ 'Ignored'   :'☒',
-"                 \ 'Clean'     :'✔︎',
-"                 \ 'Unknown'   :'?',
-"                 \ }
 
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusShowIgnored = 1
 let g:NERDTreeGitStatusUntrackedFilesMode = 'all'
 let g:NERDTreeGitStatusShowClean = 1
 
-
 " vim-airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-
 
 " vim-nerdtree-syntax-highlight
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
@@ -103,7 +87,6 @@ let g:NERDTreeSyntaxEnabledExactMatches = ['node_modules', 'favicon.ico'] " enab
 
 let g:NERDTreeLimitedSyntax = 1
 
-
 " setting up plugins for git integration
 " Change these if you want
 let g:signify_sign_add               = '+'
@@ -124,8 +107,8 @@ let g:signify_sign_show_text = 1
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
 
-
 " lualine.vim
 lua << END
-require('lualine').setup()
+require'lualine'.setup {}
+require'barbar'.setup {...}
 END
