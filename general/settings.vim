@@ -107,6 +107,13 @@ let g:signify_sign_show_text = 1
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
 
+" vimTex settings
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_quickfix_open_on_warning = 0
+
 " lualine.vim
 lua << END
 require'lualine'.setup {}

@@ -61,4 +61,10 @@ Plug 'nvim-tree/nvim-web-devicons'
 " fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" VimTeX
+Plug 'lervag/vimtex'
+
+" vim-transparent
+Plug 'tribela/vim-transparent'
 call plug#end()
